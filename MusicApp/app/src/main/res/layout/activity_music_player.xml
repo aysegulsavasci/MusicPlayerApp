@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1EE9B3"
+    tools:context=".MusicPlayerActivity">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/song_title"
+        android:text="@string/title_of_the_song"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+         />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/images_music"
+        android:padding="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/images_music"
+        android:layout_above="@id/controls"
+        android:contentDescription="@string/default_time"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/controls"
+        android:padding="40dp"
+        tools:ignore="ExtraText">
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seek_bar"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/black"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/current_time"
+            android:layout_below="@+id/seek_bar"
+            android:text="@string/default_time"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/black"
+            android:layout_margin="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/total_time"
+            android:layout_below="@+id/seek_bar"
+            android:text="@string/default_time"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/black"
+            android:layout_margin="20dp"/>
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_chevron_left_24"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/previous"
+            android:contentDescription="@string/default_time"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_chevron_right_24"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/next"
+            android:contentDescription="@string/default_time"/>
+
+        <ImageView
+            android:id="@+id/pause_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/baseline_pause_circle_outline_24"
+            android:contentDescription="@string/default_time"/>
+
+
+    </RelativeLayout>
